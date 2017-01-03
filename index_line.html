@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>新闻APP凤凰卫视分享页</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://p2.ifengimg.com/29b92e35b2b20708/2016/47/swiper.min.css"/>
+    <script type="text/javascript" src="http://y0.ifengimg.com/base/jQuery/jquery-1.9.1.min.js"></script>
+</head>
+<body style="max-width:7.5rem;margin:0 auto">
+<style type="text/css">
+    /*reset*/
+    body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{margin:0;padding:0}
+    article,aside,footer,header,hgroup,nav,section,audio,canvas,video,img{display:block}
+    body{font-size:100%;font-family:Helvetica,STHeiti,Droid Sans Fallback;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+    textarea{resize:none}
+    iframe,img{border:0}
+    ul,ol{list-style:none}
+    input,select,textarea{outline:0;-webkit-user-modify:read-write-plaintext-only}
+    input{-webkit-appearance:none}
+    a{text-decoration:none}
+    h1,h2,h3,h4{font-weight:100}
+    html{font-size:100px}
+    .left{float:left}
+    .right{float:right}
+    /*headerbox*/
+    .headerbox{overflow: hidden;}
+    .headerbox img{width:100%;}
+    /*focusWrap*/
+    .intro{padding:0 .25rem;overflow:hidden}
+    .intro p{width:5.9rem;line-height:.46rem;margin:.65rem auto;font-size:.28rem;word-break: break-all;}
+    /*focus*/
+    .focus_wrap{padding:0 .25rem}
+    .focus{margin:0 0 31px;overflow:hidden;position:relative;background:#000}
+    .focus img{display:block;width:100%;}
+    .focus .swiper-slide span{position:absolute;bottom:0;left:0;width:100%;height:38px;line-height:38px;font-size:.34rem;color:#fff;background:url(http://p2.ifengimg.com/ad0d010d99c699f5/2016/52/ifengnews_focus.png) repeat-x;background-size:cover;box-sizing:border-box;padding:0 45px 0 15px}
+    .focus .swiper-pagination{font-size:.22rem;color:#d0cdcd;left:auto;right:15px;bottom:10px;width:auto}
+    .focus .swiper-pagination-current{font-size:.36rem;color:#f54343;}
+    /*foclabel*/
+    .foclabel{padding:0 .25rem;overflow:hidden}
+    .foclabel a{display: block;float:left;padding:.15rem .3rem;margin:0 .14rem 0.16rem 0;font-size:.3rem;border:1px solid #f0f0f0;border-radius:.3rem;-webkit-border-raidus:.3rem;color:#1a1a1a}
+    /*title*/
+    .i_section_tit{padding:0 .3rem;font-size:.32rem;color:#f54343}
+    .i_section_tit a{color:#f54343}
+    /*公用*/
+    .i_section{padding:.45rem 0 0}
+    .pic_text:before,.pic_text:after,.article:before,.article:after,.bigPic:before,.bigPic:after,.itemsT:before, .itemsT:after,.videoList:before,.videoList:after,.live:before,.live:after,.game:before,.game:after,.pics:before,.pics:after{display:table;content:"";line-height:0;clear:both;}
+    .pic_text .i-metadata .i-desc .i-num,.article .i-desc .i-num,.bigPic .v-desc .i-num,.videoList .v-desc .i-num,.itemsT .v-desc .i-num{float:right;padding-right:.29rem;background:url(http://p2.ifengimg.com/29b92e35b2b20708/2016/47/news1121-bg1.png) no-repeat center right;background-size:.24rem .2rem;margin-right:0}
+    .bigPic .v-desc .i-source,.videoList .v-desc .i-source,.itemsT .v-desc .i-source,.article .i-desc .i-source{max-width:2rem;text-overflow:ellipsis; white-space:nowrap;overflow:hidden;}
+    .bigPic .v-desc div,.videoList .v-desc div,.itemsT .v-desc div,.article .i-desc div{float:left;margin-right:.18rem;}
+    .pic_text,.live{height:1.3rem;padding:.24rem .3rem;border-bottom:1px solid #efefef;position:relative;}
+    .article, .itemsT,.videoList,.bigPic{padding:.24rem .3rem;border-bottom:1px solid #efefef;position:relative;box-sizing:border-box;}
+    .article .i-desc,.bigPic .v-desc,.videoList .v-desc,.itemsT .v-desc,.bigPic .v-desc{font-size:.22rem;width:6.9rem;color:#999999;}
+    /*图文*/
+    .pic_text .i-thumb{width:1.82rem;height:1.3rem;overflow:hidden;}
+    .pic_text .i-pic{width:1.82rem;height:1.3rem;overflow:hidden;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg7.jpg) no-repeat 0 0/100% 100%;}
+    .pic_text .i-pic img{width:1.82rem;height:1.3rem;overflow:hidden;}
+    .pic_text .i-metadata{width:4.7rem;height:1.3rem;overflow:hidden;position:absolute;right:.3rem;top:.24rem}
+    .pic_text .i-metadata .i-title{font-size:.36rem;line-height:.46rem;height:.92rem;overflow:hidden;color:#1a1a1a;}
+    .pic_text .i-metadata .i-desc{font-size:.22rem;position:absolute;bottom:0;width:4.7rem;color:#999999;}
+    .pic_text .i-metadata .i-desc div{float:left;margin-right:.18rem;}
+    /*比赛直播*/
+    .game{padding:.24rem .3rem;border-bottom:1px solid #efefef;position:relative;}
+    .game_live{margin:0 0 .2rem;font-size:.24rem;color:#999;}
+    .game_live .dian{display:inline-block;width:.08rem;height:.08rem;margin:0 0.13rem 0 0;background:#f54343;border-radius:.04rem;vertical-align:middle}
+    .game_live i{margin:0 .07rem;font-style:normal}
+    .game_desc{position:relative}
+    .game_desc h2{font-size:.36rem;line-height:.44rem;height:.44rem;color:#1a1a1a;}
+    .game_desc .game_status{position:absolute;right:0;top:0;display:block;padding:.03rem   .06rem;font-size:.18rem;color:#018057;border:1px solid #018057;border-radius:.06rem}
+    .game_info{margin:0.33rem 0 0;}
+    .game_info .team_box{font-size:.22rem;color:#000;}
+    .game_info .team_box img{width:.9rem;height:.62rem;margin:0 0 .16rem}
+    .game_info .goals{font-size:.9rem;font-family: "Helvetica Neue",Helvetica,STHeiTi Light,sans-serif;letter-spacing:.1rem;color:#000}
+    .game_info>div{text-align:center;}
+    /*纯文字*/
+    .article{width:100%;overflow:hidden;}
+    .article .i-title{width:6.9rem;max-height:.8rem;line-height:.4rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;padding-bottom:.2rem;}
+    .article .i-text{min-height:.68rem;width:100%}
+    /*直播*/
+    .live .i-thumb{position:relative;width:1.82rem;height:1.3rem;overflow:hidden;}
+    .live .i-thumb .i-labal{position:absolute;top:.14rem;left:.15rem;width:.84rem;height:.4rem;background:url(http://p2.ifengimg.com/ad0d010d99c699f5/2016/52/flag.png) no-repeat;background-size:cover}
+    .live .i-pic{width:1.82rem;height:1.3rem;overflow:hidden;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg7.jpg) no-repeat 0 0/100% 100%;}
+    .live .i-pic img{width:1.82rem;height:1.3rem;overflow:hidden;}
+    .live .i-metadata{width:4.7rem;height:1.3rem;overflow:hidden;position:absolute;right:.3rem;top:.24rem}
+    .live .i-metadata .i-title{font-size:.36rem;line-height:.44rem;height:.88rem;overflow:hidden;color:#1a1a1a;}
+    .live .i-metadata .i-desc{font-size:.22rem;position:absolute;bottom:0;width:4.7rem;color:#999999;}
+    .live .i-metadata .i-desc div{float:left;margin-right:.18rem;}
+    .live .i-metadata .i-desc .i-live{width:1.12rem;height:.23rem;margin-top:.1rem;background:url(http://p2.ifengimg.com/ad0d010d99c699f5/2016/52/living_icn.png) no-repeat;background-size:cover}
+    .live .i-metadata .i-desc .i-num{float:right;margin-right:0;}
+    /*大图*/
+    .bigPic .v-tit{max-height:.88rem;line-height:.44rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;}
+    .bigPic img{height:3.93rem;overflow:hidden}
+    .bigPic .vpic{position:relative;margin:.25rem 0;}
+    .bigPic .v-desc .i-like, .itemsT .v-desc .i-like{float:right;padding-right:.29rem;background:url(http://p2.ifengimg.com/ad0d010d99c699f5/2016/52/news1216_icn01.png) no-repeat center right;background-size:.22rem .19rem}
+    /*视频*/
+    .videoList .v-tit{max-height:.8rem;line-height:.4rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;}
+    .videoList .v-videobg{position:relative;margin:.25rem 0;}
+    .videoList .v-videobg .v-bg{height:3.93rem;overflow:hidden;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg9.jpg) no-repeat 0 0/100% 100%;}
+    .videoList .v-videobg .v-bg img{height:3.93rem;overflow:hidden;}
+    .videoList .v-videobg .v-btn{position:absolute;width:1.11rem;height:1.11rem;background:url(http://p2.ifengimg.com/29b92e35b2b20708/2016/47/news1121-bg5.png) no-repeat;top:1.33rem;left:50%;margin-left:-.555rem;background-size:cover}
+    .videoList .v-videobg .v-time{position:absolute;top:2.6rem;left:50%;margin-left:-.555rem;width:1.11rem;font-size:.24rem;color:#fff;text-align:center}
+    .videoList .v-videobg .i-time{position:absolute;width:1.11rem;text-align:center;font-size:.22rem;color:#fff;top:2.69rem;left:50%;margin-left:-.555rem;}
+    .videoList  .v-desc .i-link{font-size:.24rem;padding:0 .06rem;border:1px solid #f54343;color:#f54343;border-radius:.06rem;}
+    .videoList  .v-desc .i-link a{color:#f54343}
+    .videoList  .v-desc .i-share{float:right;width:.26rem;height:.24rem;margin:.02rem 0 0 .37rem;background:url(http://p2.ifengimg.com/ad0d010d99c699f5/2016/52/news1216_icn02.png) no-repeat center;background-size:cover}
+    /*图文3列*/
+    .itemsT{width:100%;overflow:hidden;}
+    .itemsT .i-title{width:6.9rem;max-height:.8rem;line-height:.4rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;}
+    .itemsT .i-pic{overflow:hidden;width:110%;}
+    .itemsT .i-text{display:none;min-height:.68rem;width:100%}
+    .itemsT .i-pic ul li{width:2.24rem;height:1.54rem;overflow:hidden;float:left;margin:.24rem 0;margin-right:.09rem;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg8.jpg) no-repeat 0 0/100% 100%;}
+    .itemsT .i-pic ul img{width:2.24rem;height:1.54rem;overflow:hidden;}
+    /*四小图*/
+    .pics{position:relative;padding:.24rem 0 .24rem .3rem;border-bottom:1px solid #efefef}
+    .pics ul li{float:left;width:3.32rem;margin:0 .27rem .36rem 0;border-bottom:1px solid #efefef;}
+    .pics ul li img{width:3.32rem;height:2.9rem;overflow:hidden}
+    .pics ul li .v-videobg{position:relative;}
+    .pics ul li .v-videobg .v-btn{position:absolute;top:50%;left:50%;margin:-.29rem 0 0 -.29rem;width:.58rem;height:.58rem;background:url(http://p2.ifengimg.com/29b92e35b2b20708/2016/47/news1121-bg5.png) no-repeat;background-size:cover;}
+    .pics ul li:nth-last-child(1),.pics ul li:nth-last-child(2){border:0;margin-bottom:0}
+    .pics .v-tit{font-size:.28rem;height:.66rem;line-height:.66rem;color:#1a1a1a;overflow:hidden}
+</style>
+<!-- rem s -->
+<script>
+    (function (doc, win) {
+        var _root = doc.documentElement,
+                resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                resizeCallback = function () {
+                    var clientWidth = _root.clientWidth,
+                            fontSize = 10 * 10;
+                    if (!clientWidth) return;
+                    if (clientWidth < 1080) {
+                        fontSize = 100 * (clientWidth / 750);
+                    } else {
+                        fontSize = 100 * (1080 / 750);
+                    }
+                    _root.style.fontSize = fontSize + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvent, resizeCallback, false);
+        doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+    })(document, window);
+
+</script>
+<!-- rem e -->
+
+
+<!--头部导航 begin-->
+<div class="headerbox"></div>
+<!--头部导航 end-->
+
+<!--导读 begin -->
+<div class="intro"></div>
+<!--导读 end -->
+
+<!-- focus begin-->
+<div class="focus_wrap">
+    <section class="focus">
+        <div class="swiper-container">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+</div>
+<!--焦点图 end-->
+
+<!--标签 begin -->
+<div class="foclabel"></div>
+<!--标签 end -->
+
+<div class="i_main" id="i_main"></div>
+<style>
+    .hotcomment {
+        position: relative;
+        padding: 0 15px;
+        margin: 18px 0 11px;
+        border-bottom: 1px solid #e5e5e5
+    }
+
+    .gt {
+        font-size: 16px;
+        color: #1a1a1a;
+        padding: 4px 0;
+        border: 0;
+        font-weight: bold
+    }
+
+    .gt_list {
+        padding-top: 4px
+    }
+
+    .gt_list li {
+        padding: 11px 0
+    }
+
+    .gt_list li:last-child {
+        border-bottom: 0
+    }
+
+    .gt_list li img {
+        width: 28px;
+        height: 28px;
+        display: block;
+        float: left
+    }
+
+    .gt_list li div.pl {
+        padding-left: 44px
+    }
+
+    .gt_list li div.pl h3 {
+        font-size: 12px;
+        line-height: 100%;
+        color: #a5a5a5
+    }
+
+    .gt_list li div.pl p {
+        color: #222;
+        line-height: 1.4;
+        padding-top: 12px;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 14px;
+        padding-bottom: 17px
+    }
+
+    .gt_list li:last-child div.pl p {
+        border-bottom: 0
+    }
+
+    .gt_list li div.pl p.bornone {
+        border-bottom: 0
+    }
+
+    .lookmore {
+        text-align: center;
+        background: #f54343;
+        line-height: 44px;
+        border-radius: 2px;
+        font-size: 16px;
+        margin: 0 9px;
+        font-weight: bold
+    }
+
+    .lookmore a {
+        color: #fff
+    }
+    .footer_fixed{display:none;position:fixed;bottom:0;left:0;right:0;height:1.12rem;background:#fff;opacity:.95;padding-right:.28rem;overflow:hidden;z-index:9999;border-top:1px solid #eee;}
+    .footer_fixed a.hot_bottom{position:relative;display:block;height:1.12rem;color:#1a1a1a}
+    .footer_fixed span{display:inline-block;position:absolute}
+    .ftf_l{left:.26rem;width:100%}
+    .ftf_l img{position:relative;height:.76rem;width:2.65rem;margin-top:.18rem;}
+    .ftf_r{top:.27rem;right:0;}
+    .footer_fixed span.ftf_r b{line-height:.56rem;display:block;background:#f54343;padding:0 .15rem;font-size:0.3rem;text-align:center;color:#fff;-webkit-border-radius:.06rem;-moz-border-radius:.06rem;border-radius:.06rem;font-weight:normal}
+</style>
+<div class="hotcomment">
+    <div class="gt clickfb">热门评论</div>
+    <ul class="gt_list" id="commentList">
+    </ul>
+</div>
+<div id="comment_count" class="openAppCom lookmore" down_tag="comtmore"><a class="openAppComment" style="display:block;height:44px; "
+                                                                           href="javascript:;">去凤凰新闻看更多评(1384）</a></div>
+<div style="height:1.5rem;"></div>
+<div class="footer_fixed" id="footerH" style="display:block">
+    <a id="openApps" class="hot_bottom openApp" down_tag="1974" href="javascript:;">
+        <span class="ftf_l">
+            <img class="hot_img" src="http://p2.ifengimg.com/ad0d010d99c699f5/2016/52/news1216_icn03.png">
+        </span>
+        <span class="hot_doc"></span>
+        <span id="downopen" class="ftf_r"><b>立即打开</b></span>
+    </a>
+</div>
+<div class=""></div>
+<!-- 模板引擎 -->
+<script type="text/javascript" src="http://y3.ifengimg.com/6b12b56939e61447/2016/5/zepto.min.js"></script>
+<script src="http://p2.ifengimg.com/29b92e35b2b20708/2016/47/swiper.min.js"></script>
+<!--模板引擎-->
+<script type="text/javascript" src="http://p3.ifengimg.com/a/2016/1128/underscore-min.js"></script>
+<!-- <script type="text/javascript" src="./js/getComments.js"></script> -->
+<!--焦点图-->
+<script type="text/template" id="focusTem">
+    <%_.each(_focus, function(n){%>
+    <%var _this=n%>
+    <div class="swiper-slide">
+        <a href="<%= _this.links[0].weburl %>">
+            <img class="lazy" src="<%= _this.thumbnail %>" alt=""/>
+            <span><%= _this.title %></span>
+        </a>
+    </div>
+    <%})%>
+</script>
+<!--信息流-->
+<script type="text/template" id="listTem">
+    <%_.each(_data, function(n,i){%>
+    <%var _this=n%>
+    <%var index=i%>
+
+    <div class="i_section" id=<%= _this.view + i%>>
+        <div class="i_section_tit"><%= _this.title %></div>
+        <div class="i_section_con">
+            <% if (_this.view == "list") { %>
+            <%_.each(_this.podItems, function(item){%>
+            <% if (item.thumbnails.length !== 0) { %>
+            <!--3小图-->
+            <div class="item itemsT">
+                <a href="<%= item.links[0].weburl %>">
+                    <div class="i-title"><%= item.title %></div>
+                    <div class="i-pic">
+                        <ul>
+                            <%_.each(item.thumbnails, function(ite){%>
+                            <li><img src=<%= ite %> alt="" class="lazy"/></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                    <div class="v-desc">
+                        <div class="i-source"><%= item.updateTime %></div>
+                        <div class="i-num"><%= item.commentCount %></div>
+                        <div class="i-like"><%= item.count %></div>
+                    </div>
+                </a>
+            </div>
+            <% } else if (item.thumbnail != "") { %>
+            <!--左图右文-->
+            <div class="item pic_text">
+                <a href="<%= item.links[0].weburl %>">
+                    <div class="i-thumb">
+                        <div class="i-pic"><img src=<%= item.thumbnail %> alt="" class="lazy"></div>
+                    </div>
+                    <div class="i-metadata">
+                        <div class="i-title"><%= item.title %></div>
+                        <div class="i-desc">
+                            <div class="i-time"><%= item.updateTime %></div>
+                            <div class="i-num"><%= item.commentCount %></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } else if (item.sportsLiveExt) { %>
+            <!--直播赛-->
+            <div class="item game">
+                <a href="<%= item.links[0].weburl %>">
+                    <div class="game_live"><span class="dian"></span>直播
+                        <i>|</i><span><%= item.sportsLiveExt.tag %></span></div>
+                    <div class="game_desc">
+                        <h2><%= item.sportsLiveExt.title %></h2>
+                        <span class="game_status"><%= item.sportsLiveExt.sectionstr %></span>
+                    </div>
+                    <div class="game_info">
+                        <div class="left team_box">
+                            <img src=<%= item.sportsLiveExt.leftLogo %> alt="" class="lazy">
+                            <h3><%= item.sportsLiveExt.leftName %></h3>
+                        </div>
+                        <div class="right team_box">
+                            <img src=<%= item.sportsLiveExt.rightLogo %> alt="" class="lazy">
+                            <h3><%= item.sportsLiveExt.rightName %></h3>
+                        </div>
+                        <div class="goals"><span><%= item.sportsLiveExt.leftScore %></span>-<span><%= item.sportsLiveExt.rightScore %></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% }else{%>
+            <!--纯文字-->
+            <div class="item article">
+                <a href="<%= item.links[0].weburl %>">
+                    <div class="i-metadata">
+                        <div class="i-title"><%= item.title %></div>
+                        <div class="i-desc">
+                            <div class="i-source"><%= item.updateTime %></div>
+                            <div class="i-num"><%= item.commentCount %></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+            <% }) %>
+            <% } else if(_this.view == "album"){%>
+
+            <div class="pics">
+                <ul>
+                    <%_.each(_this.podItems, function(item){%>
+                    <li>
+                        <a href="<%= item.links[0].weburl %>">
+                            <div class="v-videobg">
+                                <div class="v-bg">
+                                    <img src=<%= item.thumbnail %> alt="" class="lazy">
+                                </div>
+                                <div class="v-btn"></div>
+                            </div>
+                            <div class="v-tit"><%= item.title %></div>
+                        </a>
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+    <% }) %>
+</script>
+</div>
+<script>
+
+    //focus
+    var focusSwiper = new Swiper('.focus .swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        paginationClickable: true,
+        loop: false,
+        autoplay: 5000
+    });
+
+    _wdata={};
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    var topicid = getUrlParam('topicid');
+
+
+    var obj = {};
+    //日期是否是今天
+    function isToday(str) {
+        var d = new Date();
+        var y = d.getFullYear(); // 2014
+        var m = d.getMonth() + 1; // 7,月份从0开始的，注意
+        var d = d.getDate(); // 9
+        var date_str = y + '-' + m + '-' + d;
+        return str == date_str;
+    }
+    // 得到评论
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "http://icomment.ifeng.com/get.php?job=1&ishot=yes&orderby=uptimes&format=js&callback=commentShow&p=1&pagesize=5&docurl=http://inews.ifeng.com/ispecial/"+topicid+"index.shtml",
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "commentShow",
+        success: function (data) {
+        }
+    })
+    //jsonp回调
+    function commentShow(commentJsonVarStr___) {
+        var data = commentJsonVarStr___;
+        var html = '';
+        var comments = data.comments;
+
+        for (var i = 0; i < comments.length; i++) {
+            if (i >= 3) {
+                break;
+            }
+            var uname = comments[i].uname;
+            try {
+                var ext2 = JSON.parse(comments[i].ext2);
+                uname = ext2.nickname ? ext2.nickname : comments[i].uname;
+            } catch (e) {
+
+            }
+            var ip_from = comments[i].ip_from;
+            ip_from = ip_from.replace("省", "");
+            ip_from = ip_from.replace("市", "");
+            html += '<li><img src="http://y1.ifengimg.com/ifengimcp/pic/20150320/7ff7ecd75751ff671e48_size2_w56_h56.png" />';
+            html += '<div class="pl">';
+            html += '<h3>' + ip_from + ' ' + uname + '</h3>';
+            if (comments[i].comment_contents.length > 200) {
+                comments[i].comment_contents = comments[i].comment_contents.substring(0, 200) + '...';
+            }
+            html += '<p>' + comments[i].comment_contents;
+            html += '</p></div>';
+            html += '</li>';
+        }
+        var commentListNode = document.getElementById("commentList");
+        var commentListOldContent = commentListNode.innerHTML;
+        commentListNode.innerHTML = html + commentListOldContent;
+        if (data.join_count >= 6) {
+            $(".lookmore a").html('去凤凰新闻看更多评论(' + data.join_count + ')');
+        } else if (data.count < 6 && data.count >= 1) {
+            $(".lookmore a").html('打开凤凰新闻，查看并参与评论');
+        } else {
+            $('.hotcomment').hide();
+            $(".lookmore a").html('打开凤凰新闻，查看并参与评论');
+        }
+    }
+
+    //获取主题详情
+    $.ajax({
+        url: 'http://api.iclient.ifeng.com/TopicApiForCmpp?topicid='+topicid+'&json=y&os=ios&gv=5.4.0&callback=test',
+        type: 'get',
+        async: false,
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "test",
+        success: function (data) {
+            console.log(data)
+        }
+    })
+
+
+    function test(data){
+        var subData = data.body.subjects;
+        var itemsList = [];
+        var headerInner = "",
+                introInner = "",
+                header = subData[0].content,
+                intro = subData[1].content,
+                focusList = subData[2].podItems;
+        subData.map(function(item,index){
+            if(item.view !== "multiTitle" && item.view !== "text" && item.view !== "slider"){
+                itemsList.push(item)
+            }else if(item.view == "slider"){
+                focusList = item.podItems
+            }else if(item.view == "multiTitle"){
+                header = item.content
+            }else if(item.view == "text"){
+                intro = item.content
+            }
+        })
+
+        obj.wwwUrl = data.body.content.wwwUrl
+        obj.documentId = data.meta.documentId
+        obj.type = data.meta.type
+
+        $(".headerbox").html(headerInner += "<img src='" + header.customBanner + "' alt='' class='lazy'/>");
+        $(".intro").html(introInner += "<p>" + intro.intro + "</p>");
+        //focus
+        _focus = focusList;
+        $('.swiper-wrapper').html(_.template($('#focusTem').html(), _focus));
+        focusSwiper.update();
+        _data = itemsList;
+        _data.map( function(item, index) {
+            item.podItems.map(function (ite, index) {
+                if (ite.updateTime != undefined) {
+                    var dateArray = ite.updateTime.split(" ")
+                    if (isToday(dateArray[0])) {
+                        ite.updateTime = dateArray[1].substring(0, 5)
+                    } else {
+                        ite.updateTime = dateArray[0].substring(5, 10)
+                    }
+                }
+            })
+        })
+        for (var i = 0; i < _data.length; i++) {
+            _data[i].id = _data[i].view + i;
+            $(".foclabel").append("<a href=" + '#' + _data[i].id + ">" + _data[i].title + "</a>");
+        }
+        $('.i_main').html(_.template($('#listTem').html(), _data));
+        _wdata.title = data.body.head.title;
+        _wdata.desc = intro.intro;
+        _wdata.img = '';
+        _wdata.url='http://share.iclient.ifeng.com/ifengNewsTopic?topicid='+topicid;
+
+        var sharetitle= "凤凰专题:"+ _wdata.title;
+        var sharelink= _wdata.url;
+        var shareimgUrl=_wdata.img;
+        var sharedesc= _wdata.desc;
+        var shareTimeline = "凤凰专题:"+ _wdata.title;
+        wx.config({
+            debug: false,
+            appId: "<?php echo $signPackage['appId'];?>",
+            timestamp: "<?php echo $signPackage['timestamp'];?>",
+            nonceStr: "<?php echo $signPackage['nonceStr'];?>",
+            signature: "<?php echo $signPackage['signature'];?>",
+            jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo'
+                // 所有要调用的 API 都要加到这个列表中
+            ]
+        });
+
+    }
+
+    var ua = navigator.userAgent,
+            weixin = ua.match(/MicroMessenger/ig),
+            isWeibo = ua.match(/WeiBo/i),
+            QQ = ua.match(/QQ\//),
+            isAndroid = navigator.userAgent.match(/android/ig),
+            isIos = navigator.userAgent.match(/iphone|ipod/ig),
+            isIpad = navigator.userAgent.match(/ipad/ig);
+
+    var reg = /([1-9]?[0-9])_([0-9])/ig;
+    var iosarr = reg.exec(ua);
+    if (iosarr != null && iosarr.length >= 3) {
+        var wxosEdition = iosarr[1];
+    } else {
+        var wxosEdition = 0;
+    }
+
+    function publicClientAuto (host) {
+        if ( navigator.userAgent.indexOf("Chrome") > -1 && navigator.userAgent.indexOf("MQQBrowser") < 0) {
+            window.open(host, "target:_blank", "");
+        } else {
+            if(isIos || isIpad){
+                location.href = host;
+            }
+            if(navigator.userAgent.indexOf("MQQBrowser")> 0){
+                location.href = host;
+            }
+            var ifr = document.createElement("iframe");
+            ifr.src = host;
+            ifr.style.display = "none";
+            document.body.appendChild(ifr);
+        }
+    }
+    // sdk
+    var oUrl = this.location.href.toString();
+    var re=eval('/('+ 'ifengNewsTopic'+'=)/gi');
+    var nUrl = oUrl.replace(re,'ifengNewsTopicSDK'+'=');
+    console.log(nUrl)
+    var sdkref=encodeURIComponent(nUrl);
+
+    $('.openAppComment').click(function () {
+
+        var session = "#page#id="+ topicid +"$type="+obj.type+"$url="+obj.wwwUrl+"@#action#type=comtmore$ref="+topicid+"$kind="+obj.type+"$url="+obj.wwwUrl;
+        session = encodeURIComponent(session)
+
+        $.ajax({
+            url:"http://stadig.ifeng.com/appsta.js?datatype=&mos=&userkey=&ua=&session="+session+"&share=",
+            type: 'get',
+
+            success: function (data) {
+                console.log(data)
+            },
+            dataType: "jsonp"
+        })
+
+
+        var platform = weixin || QQ || isWeibo;
+
+        var type = 'topic2',
+                id = topicid,//专题id
+                api = 'http://api.iclient.ifeng.com/TopicApiForCmpp?topicid='+id+'&json=y&ad=y' + '&comment=1',//专题接口
+                url = 'comifengnewsclient://call?type=' + type + '&id=' + encodeURIComponent(api) + '&comment=1'+"&ref="+sdkref,
+                kind = platform + "| default_topic",
+
+                download_url = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.ifeng.news2&ckey=CK1349726987600';//应用宝地址
+        if(weixin || QQ || isWeibo){
+            if(wxosEdition >= 9){
+                var wxurl = 'https://y0.ifengimg.com/wakeupiOS/ifengnews/call/?type='+type+'&id=' + encodeURIComponent(api+kind)+"&ref="+sdkref;
+                location.href = wxurl;
+            }else{
+                var wxurl = download_url + '&android_scheme' + encodeURIComponent(url+kind);
+                location.href = wxurl;
+            }
+        }else{
+            setTimeout(function () {
+                publicClientAuto(url);
+            },200);
+            setTimeout(function () {
+                if(document.hasFocus()){
+                    location.href = 'http://statistics.appstore.ifeng.com/index.php/api/godownload?app_id=4&d_ch=7439';//下载地址
+                }
+            },1000);
+        }
+
+    });
+
+    function GetDateT(){
+        var d,s;
+        d = new Date();
+        s = d.getFullYear() + "-";        //取年份
+        s = s + (d.getMonth() + 1) + "-";//取月份
+        s += d.getDate() + "+";         //取日期
+        s += d.getHours() + ":";       //取小时
+        s += d.getMinutes() + ":";    //取分
+        s += d.getSeconds();         //取秒
+
+        return(s);
+    }
+
+    $('.openApp').click(function () {
+        var session = "#page#id="+ topicid +"$type="+obj.type+"$url="+obj.wwwUrl+"@#action#type=downopen$ref="+topicid+"$kind="+obj.type+"$url="+obj.wwwUrl;
+        session = encodeURIComponent(session)
+
+        $.ajax({
+            url:"http://stadig.ifeng.com/appsta.js?datatype=&mos=&userkey=&ua=&session="+session+"&share=",
+            type: 'get',
+            success: function (data) {
+                console.log(data)
+            },
+            dataType: "jsonp"
+        })
+        var platform = weixin || QQ || isWeibo;
+
+        var type = 'topic2',
+                id = topicid,//专题id
+                api = 'http://api.iclient.ifeng.com/TopicApiForCmpp?topicid='+id+'&json=y&ad=y',//专题接口
+                url = 'comifengnewsclient://call?type=' + type + '&id=' + encodeURIComponent(api)+"&ref="+sdkref,
+                kind = platform + "| default_topic",
+
+                download_url = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.ifeng.news2&ckey=CK1349726987600';//应用宝地址
+        if(weixin || QQ || isWeibo){
+            if(wxosEdition >= 9){
+                var wxurl = 'https://y0.ifengimg.com/wakeupiOS/ifengnews/call/?type='+type+'&id=' + encodeURIComponent(api+kind)+"&ref="+sdkref;
+                location.href = wxurl;
+            }else{
+                var wxurl = download_url + '&android_scheme' + encodeURIComponent(url+kind);
+                location.href = wxurl;
+            }
+        }else{
+            setTimeout(function () {
+                publicClientAuto(url);
+            },200);
+            setTimeout(function () {
+                if(document.hasFocus()){
+                    location.href = 'http://statistics.appstore.ifeng.com/index.php/api/godownload?app_id=4&d_ch=7439';//下载地址
+                }
+            },1000);
+        }
+
+    });
+
+
+</script>
+<?php
+$pi->loadChip (array ('__disableAE'=>1,'tpl' => 'Weixin_Share_Jssdk'));
+$jssdk = new JSSDK($pi);
+$signPackage = $jssdk->GetSignPackage();
+?>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+
+</script>
+<script type="text/javascript" src="http://p3.ifengimg.com/a/2016/1021/shareweixin_20161021.js"></script>
+<script>
+
+</script>
+</body>
+</html>
+​

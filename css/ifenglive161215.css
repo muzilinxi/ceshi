@@ -1,0 +1,118 @@
+/*reset*/
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{margin:0;padding:0}
+article,aside,footer,header,hgroup,nav,section,audio,canvas,video,img{display:block}
+body{font-size:100%;font-family:Helvetica,STHeiti,Droid Sans Fallback;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+textarea{resize:none}
+iframe,img{border:0}
+ul,ol{list-style:none}
+input,select,textarea{outline:0;-webkit-user-modify:read-write-plaintext-only}
+input{-webkit-appearance:none}
+a{text-decoration:none}
+h1,h2,h3,h4{font-weight:100}
+html{font-size:100px}
+
+.left{float:left}
+.right{float:right}
+/*headerbox*/
+.headerbox{overflow: hidden;}
+.headerbox img{width:100%;}
+/*focusWrap*/
+.intro{padding:0 .25rem;overflow:hidden}
+.intro p{width:5.9rem;line-height:.46rem;margin:.65rem auto;font-size:.28rem;word-break: break-all;}
+/*focus*/
+.focus_wrap{padding:0 .25rem}
+.focus{margin:0 0 31px;overflow:hidden;position:relative;background:#000}
+.focus img{display:block;width:100%;}
+.focus .swiper-slide span{position:absolute;bottom:0;left:0;width:100%;height:38px;line-height:38px;font-size:.34rem;color:#fff;background:url(../images/ifengnews_focus.png) repeat-x;background-size:cover;box-sizing:border-box;padding:0 45px 0 15px}
+.focus .swiper-pagination{font-size:.22rem;color:#d0cdcd;left:auto;right:15px;bottom:10px;width:auto}
+.focus .swiper-pagination-current{font-size:.36rem;color:#f54343;}
+/*foclabel*/
+.foclabel{padding:0 .25rem;overflow:hidden}
+.foclabel a{display: block;float:left;padding:.15rem .3rem;margin:0 .14rem 0.16rem 0;font-size:.3rem;border:1px solid #f0f0f0;border-radius:.3rem;-webkit-border-raidus:.3rem;color:#1a1a1a}
+/*title*/
+.i_section_tit{padding:0 .3rem;font-size:.32rem;color:#f54343}
+.i_section_tit a{color:#f54343}
+/*公用*/
+.i_section{padding:.45rem 0 0}
+.pic_text:before,.pic_text:after,.article:before,.article:after,.bigPic:before,.bigPic:after,.itemsT:before, .itemsT:after,.videoList:before,.videoList:after,.live:before,.live:after,.game:before,.game:after,.pics:before,.pics:after{display:table;content:"";line-height:0;clear:both;}
+.pic_text .i-metadata .i-desc .i-num,.article .i-desc .i-num,.bigPic .v-desc .i-num,.videoList .v-desc .i-num,.itemsT .v-desc .i-num{float:right;padding-right:.29rem;background:url(http://p2.ifengimg.com/29b92e35b2b20708/2016/47/news1121-bg1.png) no-repeat center right;background-size:.24rem .2rem;margin-right:0}
+.bigPic .v-desc .i-source,.videoList .v-desc .i-source,.itemsT .v-desc .i-source,.article .i-desc .i-source{max-width:2rem;text-overflow:ellipsis; white-space:nowrap;overflow:hidden;}
+.bigPic .v-desc div,.videoList .v-desc div,.itemsT .v-desc div,.article .i-desc div{float:left;margin-right:.18rem;}
+.pic_text,.live{height:1.3rem;padding:.24rem .3rem;border-bottom:1px solid #efefef;position:relative;}
+.article, .itemsT,.videoList,.bigPic{padding:.24rem .3rem;border-bottom:1px solid #efefef;position:relative;box-sizing:border-box;}
+.article .i-desc,.bigPic .v-desc,.videoList .v-desc,.itemsT .v-desc,.bigPic .v-desc{font-size:.22rem;width:6.9rem;color:#999999;}
+/*图文*/
+.pic_text .i-thumb{width:1.82rem;height:1.3rem;overflow:hidden;}
+.pic_text .i-pic{width:1.82rem;height:1.3rem;overflow:hidden;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg7.jpg) no-repeat 0 0/100% 100%;}
+.pic_text .i-pic img{width:1.82rem;height:1.3rem;overflow:hidden;}
+.pic_text .i-metadata{width:4.7rem;height:1.3rem;overflow:hidden;position:absolute;right:.3rem;top:.24rem}
+.pic_text .i-metadata .i-title{font-size:.36rem;line-height:.46rem;height:.92rem;overflow:hidden;color:#1a1a1a;}
+.pic_text .i-metadata .i-desc{font-size:.22rem;position:absolute;bottom:0;width:4.7rem;color:#999999;}
+.pic_text .i-metadata .i-desc div{float:left;margin-right:.18rem;}
+/*比赛直播*/
+.game{padding:.24rem .3rem;border-bottom:1px solid #efefef;position:relative;}
+.game_live{margin:0 0 .2rem;font-size:.24rem;color:#999;}
+.game_live .dian{display:inline-block;width:.08rem;height:.08rem;margin:0 0.13rem 0 0;background:#f54343;border-radius:.04rem;vertical-align:middle}
+.game_live i{margin:0 .07rem;font-style:normal}
+.game_desc{position:relative}
+.game_desc h2{font-size:.36rem;line-height:.44rem;height:.44rem;color:#1a1a1a;}
+.game_desc .game_status{position:absolute;right:0;top:0;display:block;padding:.03rem   .06rem;font-size:.18rem;color:#018057;border:1px solid #018057;border-radius:.06rem}
+.game_info{margin:0.33rem 0 0;}
+.game_info .team_box{font-size:.22rem;color:#000;}
+.game_info .team_box img{width:.9rem;height:.62rem;margin:0 0 .16rem}
+.game_info .goals{font-size:.9rem;font-family: "Helvetica Neue",Helvetica,STHeiTi Light,sans-serif;letter-spacing:.1rem;color:#000}
+.game_info>div{text-align:center;}
+/*纯文字*/
+.article{width:100%;overflow:hidden;}
+.article .i-title{width:6.9rem;max-height:.8rem;line-height:.4rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;padding-bottom:.2rem;}
+.article .i-text{min-height:.68rem;width:100%}
+/*直播*/
+.live .i-thumb{position:relative;width:1.82rem;height:1.3rem;overflow:hidden;}
+.live .i-thumb .i-labal{position:absolute;top:.14rem;left:.15rem;width:.84rem;height:.4rem;background:url(../images/flag.png) no-repeat;background-size:cover}
+.live .i-pic{width:1.82rem;height:1.3rem;overflow:hidden;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg7.jpg) no-repeat 0 0/100% 100%;}
+.live .i-pic img{width:1.82rem;height:1.3rem;overflow:hidden;}
+.live .i-metadata{width:4.7rem;height:1.3rem;overflow:hidden;position:absolute;right:.3rem;top:.24rem}
+.live .i-metadata .i-title{font-size:.36rem;line-height:.44rem;height:.88rem;overflow:hidden;color:#1a1a1a;}
+.live .i-metadata .i-desc{font-size:.22rem;position:absolute;bottom:0;width:4.7rem;color:#999999;}
+.live .i-metadata .i-desc div{float:left;margin-right:.18rem;}
+.live .i-metadata .i-desc .i-live{width:1.12rem;height:.23rem;margin-top:.1rem;background:url(../images/living_icn.png) no-repeat;background-size:cover}
+.live .i-metadata .i-desc .i-num{float:right;margin-right:0;}
+/*大图*/
+.bigPic .v-tit{max-height:.88rem;line-height:.44rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;}
+.bigPic img{height:3.93rem;overflow:hidden}
+.bigPic .vpic{position:relative;margin:.25rem 0;}
+.bigPic .v-desc .i-like, .itemsT .v-desc .i-like{float:right;padding-right:.29rem;background:url(../images/news1216_icn01.png) no-repeat center right;background-size:.22rem .19rem}
+/*视频*/
+.videoList .v-tit{max-height:.8rem;line-height:.4rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;}
+.videoList .v-videobg{position:relative;margin:.25rem 0;}
+.videoList .v-videobg .v-bg{height:3.93rem;overflow:hidden;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg9.jpg) no-repeat 0 0/100% 100%;}
+.videoList .v-videobg .v-bg img{height:3.93rem;overflow:hidden;}
+.videoList .v-videobg .v-btn{position:absolute;width:1.11rem;height:1.11rem;background:url(http://p2.ifengimg.com/29b92e35b2b20708/2016/47/news1121-bg5.png) no-repeat;top:1.33rem;left:50%;margin-left:-.555rem;background-size:cover}
+.videoList .v-videobg .v-time{position:absolute;top:2.6rem;left:50%;margin-left:-.555rem;width:1.11rem;font-size:.24rem;color:#fff;text-align:center}
+.videoList .v-videobg .i-time{position:absolute;width:1.11rem;text-align:center;font-size:.22rem;color:#fff;top:2.69rem;left:50%;margin-left:-.555rem;}
+.videoList  .v-desc .i-link{font-size:.24rem;padding:0 .06rem;border:1px solid #f54343;color:#f54343;border-radius:.06rem;}
+.videoList  .v-desc .i-link a{color:#f54343}
+.videoList  .v-desc .i-share{float:right;width:.26rem;height:.24rem;margin:.02rem 0 0 .37rem;background:url(../images/news1216_icn02.png) no-repeat center;background-size:cover}
+/*图文3列*/
+.itemsT{width:100%;overflow:hidden;}
+.itemsT .i-title{width:6.9rem;max-height:.8rem;line-height:.4rem;font-size:.36rem;overflow:hidden;color:#1a1a1a;}
+.itemsT .i-pic{overflow:hidden;width:110%;}
+.itemsT .i-text{display:none;min-height:.68rem;width:100%}
+.itemsT .i-pic ul li{width:2.24rem;height:1.54rem;overflow:hidden;float:left;margin:.24rem 0;margin-right:.09rem;background:url(http://p2.ifengimg.com/a/2016/1124/news1121-bg8.jpg) no-repeat 0 0/100% 100%;}
+.itemsT .i-pic ul img{width:2.24rem;height:1.54rem;overflow:hidden;}
+/*四小图*/
+.pics{position:relative;padding:.24rem 0 .24rem .3rem;border-bottom:1px solid #efefef}
+.pics ul li{float:left;width:3.32rem;margin:0 .27rem .36rem 0;border-bottom:1px solid #efefef;}
+.pics ul li img{width:3.32rem;height:2.9rem;overflow:hidden}
+.pics ul li .v-videobg{position:relative;}
+.pics ul li .v-videobg .v-btn{position:absolute;top:50%;left:50%;margin:-.29rem 0 0 -.29rem;width:.58rem;height:.58rem;background:url(http://p2.ifengimg.com/29b92e35b2b20708/2016/47/news1121-bg5.png) no-repeat;background-size:cover;}
+.pics ul li:nth-last-child(1),.pics ul li:nth-last-child(2){border:0;margin-bottom:0}
+.pics .v-tit{font-size:.28rem;height:.66rem;line-height:.66rem;color:#1a1a1a;overflow:hidden}
+/*底部拉起*/
+.footer_fixed{display:none;position:fixed;bottom:0;left:0;right:0;height:1.12rem;background:#fff;opacity:.95;padding-right:.28rem;overflow:hidden;z-index:9999;border-top:1px solid #eee;}
+.footer_fixed a.hot_bottom{position:relative;display:block;height:1.12rem;color:#1a1a1a}
+.footer_fixed span{display:inline-block;position:absolute}
+.ftf_l{left:.26rem;width:100%}
+.ftf_l img{position:relative;height:.76rem;width:2.65rem;margin-top:.18rem;}
+.ftf_r{top:.27rem;right:0;}
+.footer_fixed span.ftf_r b{line-height:.56rem;display:block;background:#f54343;padding:0 .15rem;font-size:0.3rem;text-align:center;color:#fff;-webkit-border-radius:.06rem;-moz-border-radius:.06rem;border-radius:.06rem;font-weight:normal}
